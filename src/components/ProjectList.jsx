@@ -1,12 +1,11 @@
 
 
 function ProjectList() {
-    
     const projects = [
     {
-      title: "Project ",
-      description: "Something something...",
-      link:"#"
+      title: "Snake in C++",
+      description: "The classic game built using C++ and SFML",
+      link:"https://github.com/Mellenker/snake"
     },
     {
       title: "Project Two",
@@ -24,7 +23,6 @@ function ProjectList() {
       link:"#"
     }
   ]
-
     return (
         <section id='projects' className='projects-section'>
             <h2>Projects</h2>
