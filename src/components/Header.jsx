@@ -1,5 +1,5 @@
 function Header() {
-    const name = "My Portfolio";
+    const name = "Melker Stafverfeldt";
 
     return (
         <div className="App">
@@ -7,7 +7,7 @@ function Header() {
             <h1>{name}</h1> 
             <nav>
                 <a href='#about'>About</a>
-                <a href='#project'>Projects</a>
+                <a href='#projects'>Projects</a>
                 <a href='#contact'>Contact</a>
             </nav>
             </header> 
