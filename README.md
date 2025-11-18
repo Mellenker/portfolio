@@ -1,4 +1,7 @@
+**🚧 THIS IS A WORK IN PROGRESS! 🚧**
 # My portfolio
 Created using React.js
 
-**THIS IS A WORK IN PROGRESS!**
+## Will do:
+* Store info in a DB instead of hard-coded
+* Fix better styling
