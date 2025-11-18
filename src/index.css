@@ -1,5 +1,5 @@
 :root {
-  font-family: Cascadia Code, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -14,12 +14,7 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #464ccc;
 }
 
 body {
@@ -30,11 +25,22 @@ body {
   min-height: 100vh;
 }
 
+/* Font sizes */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 4rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
 
 /* Conforms website theme to system theme */
 @media (prefers-color-scheme: light) {
