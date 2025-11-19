@@ -1,0 +1,6 @@
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  gap: calc(var(--spacing-4) * 2);
+}

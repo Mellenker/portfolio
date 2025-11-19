@@ -4,18 +4,16 @@ function Card({ title, imgLink, description, link }) {
   return (
     <div className="card-container">
       <img src={imgLink} alt="Card Image" className="card-img" />
-      <div className="card-info-container">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card-btn"
-        >
-          View Project
-        </a>
-      </div>
+      <h3 className="card-title">{title}</h3>
+      <p className="card-description">{description}</p>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="card-btn"
+      >
+        View Project
+      </a>
     </div>
   );
 }

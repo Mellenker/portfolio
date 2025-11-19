@@ -1,0 +1,27 @@
+/* Use grid in header container? */
+
+/* Add Github button */
+
+.header-container {
+  border-style: solid;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--unit);
+  padding: var(--unit);
+}
+
+.header-name {
+  border-style: solid;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-navbar {
+  display: flex;
+  border-style: solid;
+  gap: var(--spacing-4);
+  justify-content: flex-end;
+  align-items: center;
+}
