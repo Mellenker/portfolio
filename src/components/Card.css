@@ -48,16 +48,23 @@
   align-items: center;
 }
 
-.card-btn {
+.card-link-container {
+  border-style: dotted;
   grid-column: 5 / 12;
   grid-row: 4 / 5;
   display: flex;
+  gap: var(--unit);
+}
+
+.card-link-btn {
+  display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
   border-style: solid;
   border-radius: 5px;
 }
 
-.card-btn:hover {
+.card-link-btn:hover {
   background-color: rgb(173, 173, 173);
 }
