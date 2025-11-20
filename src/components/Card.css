@@ -7,6 +7,8 @@
 
 .card-container {
   border-style: solid;
+  border-radius: var(--unit);
+  background-color: rgb(24, 24, 24);
   display: grid;
   height: 70%;
   width: 100%;
@@ -49,22 +51,40 @@
 }
 
 .card-link-container {
-  border-style: dotted;
   grid-column: 5 / 12;
   grid-row: 4 / 5;
   display: flex;
+  justify-content: flex-end;
   gap: var(--unit);
 }
 
 .card-link-btn {
   display: flex;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: var(--btn-radius);
+  gap: var(--unit);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
-.card-link-btn:hover {
-  background-color: rgb(173, 173, 173);
+.card-link-btn--github {
+  background-color: #003e79;
+  color: white;
+}
+
+.card-link-btn--github:hover {
+  background-color: #0057a8;
+}
+
+.card-link-btn--download {
+  background-color: #00853c;
+  color: white;
+}
+
+.card-link-btn--download:hover {
+  background-color: #00c056;
 }

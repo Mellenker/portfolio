@@ -1,4 +1,5 @@
 import "./Card.css";
+import { FaGithub, FaDownload } from "react-icons/fa";
 
 function Card({ title, imgLink, description, githubLink, downloadLink }) {
   return (
@@ -12,14 +13,20 @@ function Card({ title, imgLink, description, githubLink, downloadLink }) {
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="card-link-btn"
+            className="card-link-btn card-link-btn--github"
           >
+            <FaGithub />
             View on GitHub
           </a>
         )}
         {downloadLink && (
-          <a href={downloadLink} download className="card-link-btn">
-            Download
+          <a
+            href={downloadLink}
+            download
+            className="card-link-btn card-link-btn--download"
+          >
+            <FaDownload />
+            Download ZIP
           </a>
         )}
       </div>

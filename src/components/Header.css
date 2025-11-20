@@ -25,3 +25,12 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.header-navbar * {
+  border-style: solid;
+  border-radius: var(--btn-radius);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}

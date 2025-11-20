@@ -2,8 +2,6 @@ import "./ProjectList.css";
 import Card from "./Card";
 
 function ProjectList({ projects }) {
-  // Make sure
-
   return (
     <section id="projects" className="projects-section">
       <h2>Projects</h2>

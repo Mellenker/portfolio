@@ -9,7 +9,7 @@ function App() {
   const projects = [
     {
       title: "Snake in C++",
-      imgLink: "https://picsum.photos/400/300",
+      imgLink: "./images/snake.png",
       description: "The classic game built using C++ and SFML",
       githubLink: "https://github.com/Mellenker/snake",
       downloadLink: null,
