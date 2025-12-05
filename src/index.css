@@ -1,20 +1,29 @@
 :root {
-  /* Global variables */
+  /*  ##### Global variables #####*/
+
+  /* Spacing */
   --unit: 8px;
-  --spacing-1: 8px; /* 1 unit */
-  --spacing-2: 16px; /* 2 units */
-  --spacing-3: 24px; /* 3 units */
-  --spacing-4: 32px; /* 4 units */
+  --spacing-1: 8px;
+  --spacing-2: 32px;
+  --spacing-3: 64px;
+  --spacing-4: 128px;
 
   --btn-radius: 32px;
+
+  /* Colors */
+
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-background: #242424;
+  --color-primary: rgb(17, 59, 30);
+  --color-secondary: rgb(24, 24, 24);
 
   font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-text);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -49,15 +58,4 @@ h3 {
 
 p {
   font-size: 1rem;
-}
-
-/* Conforms website theme to system theme */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
 }

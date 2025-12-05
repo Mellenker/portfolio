@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const name = "Melker Stafverfeldt";
   const projects = [
     {
       title: "Snake in C++",
@@ -33,7 +34,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Header />
+      <Header name={name} />
       <About />
       <ProjectList projects={projects} />
       <Contact />
