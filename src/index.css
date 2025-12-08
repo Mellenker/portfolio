@@ -3,10 +3,13 @@
 
   /* Spacing */
   --unit: 8px;
-  --spacing-1: 8px;
+  --spacing-1: clamp(24px, 4vw, 64px);
+  /* --spacing-1: 8px; */
+  --spacing-2: clamp(8px, 4vw, 32px);
   --spacing-2: 32px;
   --spacing-3: 64px;
-  --spacing-4: 128px;
+  --spacing-4: clamp(64px, 4vw, 128px);
+  /* --spacing-4: 128px; */
 
   --btn-radius: 32px;
 
