@@ -1,7 +1,5 @@
 import "./Card.css";
 import { FaGithub, FaDownload } from "react-icons/fa";
-import { FaReact, FaNode, FaPython, FaCss3Alt, FaHtml5 } from "react-icons/fa";
-import { SiJavascript, SiCplusplus, SiVite, SiSfml } from "react-icons/si";
 
 function Card({
   title,
@@ -12,15 +10,16 @@ function Card({
   technologies,
 }) {
   const TECH_ICONS = {
-    React: { icon: FaReact, color: "#61DAFB" },
-    JavaScript: { icon: SiJavascript, color: "#F7DF1E" },
-    CSS: { icon: FaCss3Alt, color: "#1572B6" },
-    "C++": { icon: SiCplusplus, color: "#00599C" },
-    Vite: { icon: SiVite, color: "#646CFF" },
-    SFML: { icon: SiSfml, color: "#4cae4f" },
-    HTML: { icon: FaHtml5, color: "#e44d23" },
-    Python: { icon: FaPython, color: "#e44d23" },
-    Node: { icon: FaNode, color: "#e44d23" },
+    React: "react",
+    JavaScript: "javascript",
+    CSS: "css3",
+    "C++": "cplusplus",
+    Vite: "vitejs",
+    SFML: null, // Not available in devicon
+    HTML: "html5",
+    Python: "python",
+    Node: "nodejs",
+    Java: "java",
   };
 
   return (
@@ -31,15 +30,17 @@ function Card({
       <div className="card-technologies-container">
         {technologies &&
           technologies.map((tech, index) => {
-            const TechIcon = TECH_ICONS[tech]?.icon;
-            const color = TECH_ICONS[tech]?.color;
+            const iconName = TECH_ICONS[tech];
 
-            return (
-              <span key={index} className="tech-badge" style={{ color }}>
-                {TechIcon && <TechIcon />}
-                {/* <span>{tech}</span> */}
+            return iconName ? (
+              <span key={index} className="tech-badge">
+                <img
+                  src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
+                  alt={tech}
+                  style={{ width: "2em", height: "2em" }}
+                />
               </span>
-            );
+            ) : null;
           })}
       </div>
       <div className="card-link-container">
