@@ -37,11 +37,14 @@ function Card({
                 {iconName ? (
                   <img
                     src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
+                    className="tech-img"
                     alt={tech}
-                    style={{ width: "2em", height: "2em" }}
                   />
                 ) : (
-                  <span style={{ fontSize: "0.75em", textAlign: "center" }}>
+                  <span
+                    className="tech-alt"
+                    style={{ fontSize: "0.75em", textAlign: "center" }}
+                  >
                     {tech}
                   </span>
                 )}

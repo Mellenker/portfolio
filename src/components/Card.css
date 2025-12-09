@@ -61,7 +61,7 @@
 }
 
 .tech-badge {
-  font-size: 2.25rem;
+  font-size: 2rem;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -69,6 +69,18 @@
   display: flex;
   line-height: 1;
   position: relative;
+}
+
+.tech-img {
+  width: 2em;
+  height: 2em;
+}
+
+.tech-alt {
+  border-radius: var(--btn-radius);
+  padding: 0.75em;
+  background-color: var(--color-background);
+  text-align: "center";
 }
 
 .tech-badge:hover::before {
