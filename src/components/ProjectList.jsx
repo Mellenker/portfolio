@@ -15,6 +15,7 @@ function ProjectList({ projects }) {
             link={project.link}
             githubLink={project.githubLink}
             downloadLink={project.downloadLink}
+            technologies={project.technologies}
           />
         ))}
       </div>

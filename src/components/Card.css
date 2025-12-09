@@ -1,5 +1,5 @@
 .card-container {
-  border-style: solid;
+  /* border-style: solid; */
   border-radius: var(--unit);
   background-color: var(--color-secondary);
   display: grid;
@@ -26,43 +26,68 @@
 }
 
 .card-title {
+  /* font-size: 4rem; */
   grid-column: 5 / 12;
   grid-row: 1 / 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 .card-description {
   grid-column: 5 / 12;
   grid-row: 2 / 4;
-  border-style: solid;
+  /* border-style: solid; */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: scroll;
+  text-align: justify;
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
 }
 
-.card-link-container {
-  grid-column: 5 / 12;
+.card-technologies-container {
+  /* border-style: solid; */
+  grid-column: 5 / 9;
   grid-row: 4 / 5;
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--unit);
-}
-
-.card-link-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: solid;
+  gap: 1rem;
+  /* background-color: white; */
+}
+
+.tech-badge {
+  font-size: 4rem;
+}
+
+.card-link-container {
+  /* border-style: solid; */
+  grid-column: 9 / 12;
+  grid-row: 4 / 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: var(--unit);
+  padding-right: var(--unit);
+  padding-bottom: var(--unit);
+}
+
+.card-link-btn {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  align-items: center;
+  /* border-style: solid; */
   border-radius: var(--btn-radius);
   gap: var(--unit);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .card-link-btn--github {

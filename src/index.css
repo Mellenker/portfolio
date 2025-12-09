@@ -9,6 +9,7 @@
   --spacing-2: 32px;
   --spacing-3: 64px;
   --spacing-4: clamp(64px, 4vw, 128px);
+  --spacing-5: clamp(128px, 4vw, 160px);
   /* --spacing-4: 128px; */
 
   --btn-radius: 32px;
@@ -48,15 +49,15 @@ body {
 
 /* Font sizes */
 h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 p {

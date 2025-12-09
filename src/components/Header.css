@@ -3,7 +3,7 @@
 /* Add Github button */
 
 .header-container {
-  border-style: solid;
+  /* border-style: solid; */
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -13,9 +13,9 @@
 }
 
 .header-name {
-  color: var(--color-primary);
-  border-style: solid;
-  font-size: 2rem;
+  color: var(--color-text);
+  /* border-style: solid; */
+  /* font-size: 2rem; */
   justify-content: center;
   align-items: center;
 }
@@ -30,7 +30,7 @@
 }
 
 .navbar-link {
-  border-style: solid;
+  /* border-style: solid; */
   border-radius: var(--btn-radius);
   color: var(--color-text);
   padding-left: 1em;
