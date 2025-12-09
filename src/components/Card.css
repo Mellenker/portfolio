@@ -53,14 +53,36 @@
   grid-column: 5 / 9;
   grid-row: 4 / 5;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 1rem;
+  margin-left: var(--spacing-2);
   /* background-color: white; */
 }
 
 .tech-badge {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+  display: flex;
+  line-height: 1;
+  position: relative;
+}
+
+.tech-badge:hover::before {
+  content: attr(data-tech);
+  /* content: "s"; */
+  font-size: 1rem;
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  bottom: -30%;
+  transform: translateX(-50%);
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  white-space: nowrap;
 }
 
 .card-link-container {

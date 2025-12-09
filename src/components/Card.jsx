@@ -32,15 +32,21 @@ function Card({
           technologies.map((tech, index) => {
             const iconName = TECH_ICONS[tech];
 
-            return iconName ? (
-              <span key={index} className="tech-badge">
-                <img
-                  src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
-                  alt={tech}
-                  style={{ width: "2em", height: "2em" }}
-                />
+            return (
+              <span key={index} className="tech-badge" data-tech={tech}>
+                {iconName ? (
+                  <img
+                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
+                    alt={tech}
+                    style={{ width: "2em", height: "2em" }}
+                  />
+                ) : (
+                  <span style={{ fontSize: "0.75em", textAlign: "center" }}>
+                    {tech}
+                  </span>
+                )}
               </span>
-            ) : null;
+            );
           })}
       </div>
       <div className="card-link-container">

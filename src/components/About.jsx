@@ -1,9 +1,11 @@
+import "./About.css";
+
 function About() {
   return (
-    <section id="about">
+    <section id="about" className="about-section">
       <h3>Welcome to my portfolio website!</h3>
       <p>This is the about section.</p>
-      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/300" className="portrait-img" />
     </section>
   );
 }

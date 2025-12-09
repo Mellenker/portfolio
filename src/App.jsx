@@ -24,7 +24,7 @@ function App() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nulla mi, lobortis eleifend leo sit amet, bibendum tincidunt lacus. Proin in leo ac dolor elementum aliquam nec volutpat risus. Duis semper porttitor eros, scelerisque consequat turpis aliquet id. Sed vitae libero eu nibh auctor mollis quis vel purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam aliquet enim at eros mattis dictum. Suspendisse lacus urna, tristique in est a, fermentum blandit quam. Vestibulum faucibus justo sed enim finibus auctor. Morbi sit amet rhoncus augue. Pellentesque consequat consectetur dignissim.",
       githubLink: null,
       downloadLink: "archives/StudentQueue.zip",
-      technologies: ["Java", "Python"],
+      technologies: ["Java", "Python", "ZeroMQ"],
     },
     {
       title: "This portfolio",
