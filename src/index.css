@@ -17,9 +17,10 @@
   /* Colors */
 
   --color-text: rgba(255, 255, 255, 0.87);
-  --color-background: #242424;
+  --color-secondary: #121212; */
+  --color-secondary: #242424
   --color-primary: rgb(17, 59, 30);
-  --color-secondary: rgb(24, 24, 24);
+  --color-background: rgb(24, 24, 24);
 
   font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

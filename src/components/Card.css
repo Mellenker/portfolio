@@ -61,7 +61,7 @@
 }
 
 .tech-badge {
-  font-size: 2rem;
+  font-size: 1.75rem;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -72,13 +72,13 @@
 }
 
 .tech-img {
-  width: 2em;
-  height: 2em;
+  width: 2.25em;
+  height: 2.25em;
 }
 
 .tech-alt {
   border-radius: var(--btn-radius);
-  padding: 0.75em;
+  padding: 0.5em;
   background-color: var(--color-background);
   text-align: "center";
 }
@@ -122,22 +122,4 @@
   padding-right: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-}
-
-.card-link-btn--github {
-  background-color: #003e79;
-  color: white;
-}
-
-.card-link-btn--github:hover {
-  background-color: #0057a8;
-}
-
-.card-link-btn--download {
-  background-color: #00853c;
-  color: white;
-}
-
-.card-link-btn--download:hover {
-  background-color: #00c056;
 }

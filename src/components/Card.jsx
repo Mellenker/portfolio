@@ -41,12 +41,7 @@ function Card({
                     alt={tech}
                   />
                 ) : (
-                  <span
-                    className="tech-alt"
-                    style={{ fontSize: "0.75em", textAlign: "center" }}
-                  >
-                    {tech}
-                  </span>
+                  <span className="tech-alt">{tech}</span>
                 )}
               </span>
             );
@@ -58,7 +53,7 @@ function Card({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="card-link-btn card-link-btn--github"
+            className="button-1 button-1--github"
           >
             <FaGithub />
             {/* View on GitHub */}
@@ -68,7 +63,7 @@ function Card({
           <a
             href={downloadLink}
             download
-            className="card-link-btn card-link-btn--download"
+            className="button-1 button-1--download"
           >
             <FaDownload />
             {/* Download ZIP */}
