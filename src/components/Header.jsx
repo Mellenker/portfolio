@@ -17,13 +17,13 @@ function Header({ name }) {
         {/* <button classname="hamburger" onclick={toggleMenu}></button> */}
 
         <nav className="header-navbar">
-          <a className="navbar-link" href="#about">
+          <a className="header-navbar-link" href="#about">
             About
           </a>
-          <a className="navbar-link" href="#projects">
+          <a className="header-navbar-link" href="#projects">
             Projects
           </a>
-          <a className="navbar-link" href="#contact">
+          <a className="header-navbar-link" href="#contact">
             Contact
           </a>
           <div className="socialMedia-container">

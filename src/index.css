@@ -9,26 +9,28 @@
   --spacing-2: 32px;
   --spacing-3: 64px;
   --spacing-4: clamp(64px, 4vw, 128px);
-  --spacing-5: clamp(128px, 4vw, 160px);
+  /* --main-margins: clamp(4px, 100%, px); */
+  /* --margins-main: clamp(1rem, 20vw, 256px); */
+  /* --margins-main: clamp(1rem, -5.818rem + 27.273vi, 16rem); */
+  --margins-main: 8rem;
   /* --spacing-4: 128px; */
-
   --btn-radius: 32px;
 
   /* Colors */
-
   --color-text: rgba(255, 255, 255, 0.87);
-  --color-secondary: #121212; */
-  --color-secondary: #242424
+  --color-secondary: #121212;
   --color-primary: rgb(17, 59, 30);
   --color-background: rgb(24, 24, 24);
 
+  /* Root font settings */
+  font-size: clamp(14px, 1.48vw, 20px);
   font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: rgb(46, 0, 68);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,24 +45,35 @@ a {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 /* Font sizes */
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.75rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 p {
   font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --margins-main: 5rem;
+  }
+}
+@media (max-width: 760px) {
+  :root {
+    --margins-main: 1rem;
+  }
 }

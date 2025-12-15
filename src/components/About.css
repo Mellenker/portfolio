@@ -1,7 +1,8 @@
 .about-section {
+  display: block;
   border-style: solid;
-  height: 65vh;
-
+  min-height: 65vh;
+  justify-content: left;
 }
 
 .portrait-img {
