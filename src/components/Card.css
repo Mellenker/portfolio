@@ -56,7 +56,7 @@
 
 .card-info-bottom-container {
   display: flex;
-  border-style: solid;
+  /* border-style: solid; */
   justify-content: space-between;
   /* gap: calc(4 * var(--unit)); */
   gap: 1rem;
@@ -64,7 +64,6 @@
 }
 
 .card-tech-container {
-  background-color: rgb(72, 172, 97);
   display: flex;
   white-space: nowrap;
   overflow-x: auto;

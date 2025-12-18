@@ -1,10 +1,13 @@
 .about-section {
-  display: block;
-  border-style: solid;
+  /* border-style: solid; */
+  display: flex;
   min-height: 65vh;
-  justify-content: left;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.about-info {
+}
 .portrait-img {
   /* border-style: solid; */
   border-radius: 50%;

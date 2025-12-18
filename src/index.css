@@ -30,7 +30,7 @@
 
   color-scheme: light dark;
   color: var(--color-text);
-  background-color: rgb(46, 0, 68);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

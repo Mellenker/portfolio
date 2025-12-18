@@ -7,6 +7,10 @@ import Footer from "./components/Footer";
 
 function App() {
   const name = "Melker Stafverfeldt";
+
+  const title = "Yo! :D";
+  const body = "Welcome to my portfolio.";
+
   const projects = [
     // {
     //   title: "Snake in C++",
@@ -36,10 +40,11 @@ function App() {
       technologies: ["React", "JavaScript", "HTML", "CSS", "Node", "Vite"],
     },
   ];
+
   return (
     <div className="App">
       <Header name={name} />
-      <About />
+      <About title={title} body={body} />
       <ProjectList projects={projects} />
       <Contact />
       <Footer />
