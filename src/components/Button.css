@@ -1,7 +1,7 @@
 /* CSS */
 .button-1 {
-  font-size: 2rem;
-  padding: 0.4em 0.8em;
+  font-size: 1.5rem;
+  padding: 0.5em 0.7em;
   border: none;
   outline: none;
   background: #111;
@@ -12,14 +12,18 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  height: fit-content;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .button-1--github {
-  color: blue;
+  color: rgb(255, 255, 255);
 }
 
 .button-1--download {
-  color: rgb(89, 255, 0);
+  color: rgb(255, 255, 255);
 }
 
 .button-1:before {
