@@ -1,5 +1,6 @@
 import "./Card.css";
 import "./Button.css";
+import TechBadges from "./TechBadges";
 import { FaGithub, FaDownload } from "react-icons/fa";
 
 function Card({
@@ -10,19 +11,6 @@ function Card({
   downloadLink,
   technologies,
 }) {
-  const TECH_ICONS = {
-    React: "react",
-    JavaScript: "javascript",
-    CSS: "css3",
-    "C++": "cplusplus",
-    Vite: "vitejs",
-    SFML: null, // Not available in devicon
-    HTML: "html5",
-    Python: "python",
-    Node: "nodejs",
-    Java: "java",
-  };
-
   return (
     <div className="card-container">
       <img src={imgLink} alt="Card Image" className="card-img" />
@@ -30,26 +18,7 @@ function Card({
         <h3 className="card-info-title">{title}</h3>
         <p className="card-info-description">{description}</p>
         <div className="card-info-bottom-container">
-          <div className="card-tech-container">
-            {technologies &&
-              technologies.map((tech, index) => {
-                const iconName = TECH_ICONS[tech];
-
-                return (
-                  <span key={index} className="tech-badge" data-tech={tech}>
-                    {iconName ? (
-                      <img
-                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
-                        className="tech-img"
-                        alt={tech}
-                      />
-                    ) : (
-                      <span className="tech-alt">{tech}</span>
-                    )}
-                  </span>
-                );
-              })}
-          </div>
+          <TechBadges technologies={technologies} />
           <div className="card-link-container">
             {githubLink && (
               <a

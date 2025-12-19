@@ -1,0 +1,52 @@
+.tech-container {
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  overflow: visible;
+  overflow-x: auto;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 1 0;
+  z-index: 2;
+}
+
+.tech-badge {
+  font-size: 1.25rem;
+  /* display: inline-flex; */
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+  flex: 0 0 auto;
+  line-height: 1;
+  position: relative;
+  z-index: 3;
+  height: fit-content;
+}
+
+.tech-img {
+  max-width: 2.25em;
+  height: 2.25em;
+}
+
+.tech-alt {
+  border-radius: var(--btn-radius);
+  padding: 0.5em;
+  background-color: var(--color-background);
+  text-align: "center";
+}
+
+.tech-badge:hover::before {
+  content: attr(data-tech);
+  /* content: "s"; */
+  font-size: 1rem;
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  white-space: nowrap;
+  z-index: 100;
+}
