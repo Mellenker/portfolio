@@ -3,7 +3,8 @@
   display: flex;
   white-space: nowrap;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   align-items: center;
   flex: 1 1 0;
   z-index: 2;
@@ -18,7 +19,6 @@
   width: max-content;
   will-change: transform;
   animation: marquee var(--marquee-duration) linear infinite;
-  animation-play-state: running;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 }
@@ -42,8 +42,7 @@
     --tech-badge-gap
   ); /* keep a seam gap without affecting track width math */
 }
-.tech-container:hover .tech-track,
-.tech-track:hover {
+.tech-container:hover .tech-track {
   animation-play-state: paused;
 }
 
@@ -81,15 +80,15 @@
   text-align: "center";
 }
 
-.tech-badge:hover::before {
+.tech-badge:hover::before,
+.tech-alt:hover::before {
   content: attr(data-tech);
-  /* content: "s"; */
   font-size: 1rem;
   position: absolute;
   background-color: black;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -30%;
+  bottom: 50%;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   white-space: nowrap;
