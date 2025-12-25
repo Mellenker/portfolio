@@ -1,14 +1,59 @@
 .tech-container {
+  /* background-color: yellow; */
   display: flex;
   white-space: nowrap;
   position: relative;
-  overflow: visible;
-  overflow-x: auto;
+  overflow: hidden;
   align-items: center;
-  gap: 1rem;
   flex: 1 1 0;
   z-index: 2;
 }
+
+/* Marquee track animates as a single strip */
+.tech-track {
+  --tech-badge-gap: 1rem;
+  --marquee-duration: 24s;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  animation: marquee var(--marquee-duration) linear infinite;
+  animation-play-state: running;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    /* Move left by exactly one content width (two identical halves sit side-by-side) */
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.tech-set {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  gap: var(--tech-badge-gap);
+  padding-right: var(
+    --tech-badge-gap
+  ); /* keep a seam gap without affecting track width math */
+}
+.tech-container:hover .tech-track,
+.tech-track:hover {
+  animation-play-state: paused;
+}
+
+/* .tech-set:nth-child(1) {
+  background-color: #ff6b6b;
+}
+
+.tech-set:nth-child(2) {
+  background-color: #4ecdc4;
+} */
 
 .tech-badge {
   font-size: 1.25rem;

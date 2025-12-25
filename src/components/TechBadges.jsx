@@ -13,26 +13,44 @@ function TechBadges({ technologies }) {
     Node: "nodejs",
     Java: "java",
   };
+
+  const renderBadges = (startIndex) => {
+    return technologies?.map((tech, index) => {
+      const iconName = TECH_ICONS[tech];
+
+      return (
+        <span key={startIndex + index} className="tech-badge" data-tech={tech}>
+          {iconName ? (
+            <img
+              src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
+              className="tech-img"
+              alt={tech}
+            />
+          ) : (
+            <span className="tech-alt">{tech}</span>
+          )}
+        </span>
+      );
+    });
+  };
+
+  // Build a long enough content chunk to exceed viewport width
+  // Then render that chunk twice for seamless -50% marquee loop
+  const baseRepeats = Math.max(4, Math.ceil(20 / (technologies?.length || 1)));
+  const baseBadges = Array.from({ length: baseRepeats }, (_, r) =>
+    renderBadges(r * (technologies?.length || 0))
+  );
+
   return (
     <div className="tech-container">
-      {technologies &&
-        technologies.map((tech, index) => {
-          const iconName = TECH_ICONS[tech];
-
-          return (
-            <span key={index} className="tech-badge" data-tech={tech}>
-              {iconName ? (
-                <img
-                  src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${iconName}/${iconName}-original.svg`}
-                  className="tech-img"
-                  alt={tech}
-                />
-              ) : (
-                <span className="tech-alt">{tech}</span>
-              )}
-            </span>
-          );
-        })}
+      <div className="tech-track">
+        <div className="tech-set" aria-hidden={false}>
+          {baseBadges}
+        </div>
+        <div className="tech-set" aria-hidden={true}>
+          {baseBadges}
+        </div>
+      </div>
     </div>
   );
 }
