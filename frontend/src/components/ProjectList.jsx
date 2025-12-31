@@ -9,13 +9,13 @@ function ProjectList({ projects }) {
         {projects.map((project, index) => (
           <Card
             key={index}
-            imgLink={project.imgLink}
+            image_url={project.image_url}
             title={project.title}
             description={project.description}
-            link={project.link}
-            githubLink={project.githubLink}
-            downloadLink={project.downloadLink}
-            technologies={project.technologies}
+            // link={project.link}
+            github_url={project.github_url}
+            download_url={project.download_url}
+            tech_stack={project.tech_stack}
           />
         ))}
       </div>

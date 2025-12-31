@@ -23,8 +23,6 @@ function App() {
       });
   }, []);
 
-  console.log(frontendData.projects);
-
   return (
     <div className="App">
       {frontendData.projects.length === 0 ? (

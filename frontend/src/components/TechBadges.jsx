@@ -1,6 +1,6 @@
 import "./TechBadges.css";
 
-function TechBadges({ technologies }) {
+function TechBadges({ tech_stack }) {
   const TECH_ICONS = {
     React: "react",
     JavaScript: "javascript",
@@ -15,7 +15,7 @@ function TechBadges({ technologies }) {
   };
 
   const renderBadges = (startIndex) => {
-    return technologies?.map((tech, index) => {
+    return tech_stack?.map((tech, index) => {
       const iconName = TECH_ICONS[tech];
 
       return (
@@ -36,9 +36,9 @@ function TechBadges({ technologies }) {
 
   // Build a long enough content chunk to exceed viewport width
   // Then render that chunk twice for seamless -50% marquee loop
-  const baseRepeats = Math.max(4, Math.ceil(20 / (technologies?.length || 1)));
+  const baseRepeats = Math.max(4, Math.ceil(20 / (tech_stack?.length || 1)));
   const baseBadges = Array.from({ length: baseRepeats }, (_, r) =>
-    renderBadges(r * (technologies?.length || 0))
+    renderBadges(r * (tech_stack?.length || 0))
   );
 
   return (

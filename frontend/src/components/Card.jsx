@@ -5,24 +5,24 @@ import { FaGithub, FaDownload } from "react-icons/fa";
 
 function Card({
   title,
-  imgLink,
+  image_url,
   description,
-  githubLink,
-  downloadLink,
-  technologies,
+  github_url,
+  download_url,
+  tech_stack,
 }) {
   return (
     <div className="card-container">
-      <img src={imgLink} alt="Card Image" className="card-img" />
+      <img src={image_url} alt="Card Image" className="card-img" />
       <div className="card-info">
         <h3 className="card-info-title">{title}</h3>
         <p className="card-info-description">{description}</p>
         <div className="card-info-bottom-container">
-          <TechBadges technologies={technologies} />
+          <TechBadges tech_stack={tech_stack} />
           <div className="card-link-container">
-            {githubLink && (
+            {github_url && (
               <a
-                href={githubLink}
+                href={github_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-1 button-1--github"
@@ -31,9 +31,9 @@ function Card({
                 {/* View on GitHub */}
               </a>
             )}
-            {downloadLink && (
+            {download_url && (
               <a
-                href={downloadLink}
+                href={download_url}
                 download
                 className="button-1 button-1--download"
               >
