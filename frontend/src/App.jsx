@@ -13,25 +13,38 @@ function App() {
   const title = "Yo! :D";
   const body = "Welcome to my portfolio.";
 
-  const [frontendData, setFrontendData] = useState({ projects: [] }); // Fix: Start with correct structure
+  const [apiData, setApiData] = useState({ projects: [] });
+  const [error, setError] = useState(null);
 
+  // Fetch data from backend
   useEffect(() => {
-    fetch("/api")
-      .then((response) => response.json())
-      .then((backendData) => {
-        setFrontendData(backendData);
+    const controller = new AbortController();
+
+    // Use await instead of promises?
+    fetch("/api", { signal: controller.signal })
+      .then((res) => res.json())
+      .then((data) => setApiData(data))
+      .catch((error) => {
+        if (error.name !== "AbortError") {
+          console.error("Error fetching data:", error);
+          setError(error.message);
+        }
       });
+
+    return () => controller.abort();
   }, []);
 
   return (
     <div className="App">
-      {frontendData.projects.length === 0 ? (
+      {error ? (
+        <p>Error loading data: {error}</p>
+      ) : apiData.projects.length === 0 ? (
         <p>Loading...</p>
       ) : (
         <>
           <Header name={name} />
           <About title={title} body={body} />
-          <ProjectList projects={frontendData.projects} />
+          <ProjectList projects={apiData.projects} />
           <Contact />
           <Footer />
         </>

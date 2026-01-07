@@ -25,10 +25,11 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 app.get("/api", (req, res) => {
   const query = database.prepare("SELECT * FROM projects");
-  const projects = query.all().map((project) => ({
-    ...project,
-    tech_stack: JSON.parse(project.tech_stack || "[]"),
-  }));
+  const projects =
+    query.all()?.map((project) => ({
+      ...project,
+      tech_stack: JSON.parse(project.tech_stack || "[]"),
+    })) ?? [];
   res.json({ projects });
 });
 
