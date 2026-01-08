@@ -30,10 +30,12 @@ app.get("/api", (req, res) => {
       ...project,
       tech_stack: JSON.parse(project.tech_stack || "[]"),
     })) ?? [];
-  res.json({ projects });
+  res.json({ projects }); // Send JSON response
 });
 
 // Accept traffic from all IPs
 app.listen(port, "0.0.0.0", () => {
   console.log(`App is listening on ${port}`);
 });
+
+module.exports = app;
