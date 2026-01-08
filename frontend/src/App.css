@@ -7,6 +7,15 @@
   width: 100%;
   margin-inline: auto;
   text-align: center;
+  box-sizing: content-box;
   background-color: var(--color-background);
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 0.25rem;
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
   /* background-color: red; */
 }

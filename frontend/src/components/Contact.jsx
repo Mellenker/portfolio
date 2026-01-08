@@ -3,8 +3,8 @@ function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <h2>Contact Me</h2>
-      <p>If you would like to get in touch, feel free to email me at {email}</p>
+      <h2>Kontakt</h2>
+      <p>Om du vill kontakta mig kan du mejla mig på {email}</p>
     </section>
   );
 }

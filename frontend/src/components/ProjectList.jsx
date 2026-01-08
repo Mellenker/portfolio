@@ -4,7 +4,7 @@ import Card from "./Card";
 function ProjectList({ projects }) {
   return (
     <section id="projects" className="projects-section">
-      <h2>Projects</h2>
+      <h2>Projekt</h2>
       <div className="projects-list">
         {projects.map((project, index) => (
           <Card

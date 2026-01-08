@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 
 import "./App.css";
 import Header from "./components/Header";
-import About from "./components/About";
+import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 function App() {
   const name = "Melker Stafverfeldt";
 
-  const title = "Yo! :D";
-  const body = "Welcome to my portfolio.";
+  const title = "Välkommen.";
+  const body = "Mitt namn är Melker Stafverfeldt och jag är en systemvetare.";
 
   const [apiData, setApiData] = useState({ projects: [] });
   const [error, setError] = useState(null);
@@ -43,10 +42,9 @@ function App() {
       ) : (
         <>
           <Header name={name} />
-          <About title={title} body={body} />
+          <Intro title={title} body={body} />
           <ProjectList projects={apiData.projects} />
           <Contact />
-          <Footer />
         </>
       )}
     </div>

@@ -1,18 +1,22 @@
-.about-section {
+.intro-section {
   /* border-style: solid; */
   display: flex;
-  min-height: 65vh;
+  min-height: 40vh;
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
 }
 
-.about-info {
+.intro-info {
   padding: 2rem;
-  white-space: nowrap;
+  max-width: 45rem;
+  /* white-space: nowrap; */
 }
 
-.portrait-img {
+.intro-body {
+}
+
+.intro-section .portrait-img {
   /* border-style: solid; */
   border-radius: 50%;
   object-fit: cover;

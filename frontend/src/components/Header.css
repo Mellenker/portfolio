@@ -10,6 +10,8 @@
   gap: var(--unit);
   padding: var(--unit);
   min-height: 20vh;
+  /* position: sticky;
+  top: 0px; */
 }
 
 .header-name {

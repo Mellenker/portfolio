@@ -10,36 +10,31 @@ function Header({ name }) {
   // };
 
   return (
-    <div className="App">
-      <header className="header-container">
-        <h1 className="header-name">{name}</h1>
+    <header className="header-container">
+      <h1 className="header-name">{name}</h1>
 
-        {/* <button classname="hamburger" onclick={toggleMenu}></button> */}
+      {/* <button classname="hamburger" onclick={toggleMenu}></button> */}
 
-        <nav className="header-navbar">
-          <a className="header-navbar-link" href="#about">
-            About
+      <nav className="header-navbar">
+        <a className="header-navbar-link" href="#projects">
+          Projekt
+        </a>
+        <a className="header-navbar-link" href="#contact">
+          Kontakt
+        </a>
+        <div className="socialMedia-container">
+          <a
+            className="socialMediaLink"
+            href="https://www.linkedin.com/in/melker-stafverfeldt-458406363/"
+          >
+            <FaLinkedin />
           </a>
-          <a className="header-navbar-link" href="#projects">
-            Projects
+          <a className="socialMediaLink" href="https://github.com/Mellenker">
+            <FaGithub />
           </a>
-          <a className="header-navbar-link" href="#contact">
-            Contact
-          </a>
-          <div className="socialMedia-container">
-            <a
-              className="socialMediaLink"
-              href="https://www.linkedin.com/in/melker-stafverfeldt-458406363/"
-            >
-              <FaLinkedin />
-            </a>
-            <a className="socialMediaLink" href="https://github.com/Mellenker">
-              <FaGithub />
-            </a>
-          </div>
-        </nav>
-      </header>
-    </div>
+        </div>
+      </nav>
+    </header>
   );
 }
 

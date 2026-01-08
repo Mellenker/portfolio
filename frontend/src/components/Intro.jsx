@@ -1,9 +1,9 @@
-import "./About.css";
+import "./Intro.css";
 
-function About({ title, body }) {
+function Intro({ title, body }) {
   return (
-    <section id="about" className="about-section">
-      <div className="about-info">
+    <section id="intro" className="intro-section">
+      <div className="intro-info">
         <h2 className="intro-header">{title}</h2>
         <p className="intro-body">{body}</p>
       </div>
@@ -12,4 +12,4 @@ function About({ title, body }) {
   );
 }
 
-export default About;
+export default Intro;
