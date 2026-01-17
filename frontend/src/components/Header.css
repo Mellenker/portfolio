@@ -5,19 +5,24 @@
 .header-container {
   /* border-style: solid; */
   display: flex;
+  /* box-sizing: border-box; */
   justify-content: space-around;
   align-items: center;
   gap: var(--unit);
   padding: var(--unit);
-  min-height: 20vh;
-  /* position: sticky;
-  top: 0px; */
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 999;
+  background-color: black;
 }
 
 .header-name {
   color: var(--color-text);
   /* border-style: solid; */
-  /* font-size: 2rem; */
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
 }

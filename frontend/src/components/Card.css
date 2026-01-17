@@ -1,6 +1,6 @@
 .card-container {
-  /* border-style: solid; */
-  border-radius: var(--unit);
+  border-style: solid;
+  border-radius: 32px;
   background-color: var(--color-secondary);
   display: grid;
   /* grid-template-rows: repeat(4, 1fr); */
@@ -35,7 +35,7 @@
   justify-content: space-between;
   min-width: 0;
   /* background-color: blue; */
-  padding: 2rem;
+  padding: 1rem;
   padding-top: 1rem;
   padding-bottom: 0.25rem;
   gap: 1rem;
@@ -57,6 +57,7 @@
   /* grid-row: 2 / 4; */
   /* border-style: solid; */
   display: block;
+  padding: 1rem;
   /* justify-content: center; */
   /* align-items: center;
   overflow: scroll; */

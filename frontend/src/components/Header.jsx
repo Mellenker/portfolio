@@ -16,9 +16,6 @@ function Header({ name }) {
       {/* <button classname="hamburger" onclick={toggleMenu}></button> */}
 
       <nav className="header-navbar">
-        <a className="header-navbar-link" href="#projects">
-          Projekt
-        </a>
         <a className="header-navbar-link" href="#contact">
           Kontakt
         </a>
