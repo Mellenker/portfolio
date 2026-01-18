@@ -10,9 +10,9 @@
   align-items: center;
   gap: var(--unit);
   padding: var(--unit);
-  height: 7.5vh;
+  min-height: var(--header-height);
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0px;
   left: 0;
   z-index: 999;
@@ -20,6 +20,7 @@
 }
 
 .header-name {
+  margin: 0;
   color: var(--color-text);
   /* border-style: solid; */
   font-size: 2rem;

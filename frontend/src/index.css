@@ -22,6 +22,9 @@
   --color-primary: rgb(17, 59, 30);
   --color-background: rgb(24, 24, 24);
 
+  /* Header  settings */
+  --header-height: 7.5vh; /* To ensure hero takes up exactly 100vh */
+
   /* Root font settings */
   font-size: clamp(14px, 1.48vw, 20px);
   font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;

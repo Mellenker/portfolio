@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./App.css";
 import Header from "./components/Header";
-import Intro from "./components/Intro";
+import Hero from "./components/hero";
 import ProjectList from "./components/ProjectList";
 import Contact from "./components/Contact";
 
@@ -43,9 +43,11 @@ function App() {
       ) : (
         <>
           <Header name={name} />
-          <Intro title={title} body={body} />
-          <ProjectList projects={apiData.projects} />
-          <Contact />
+          <main className="page">
+            <Hero title={title} body={body} />
+            <ProjectList projects={apiData.projects} />
+            <Contact />
+          </main>
         </>
       )}
     </div>
