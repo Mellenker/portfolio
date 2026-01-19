@@ -11,7 +11,7 @@ function App() {
 
   const title = "Välkommen.";
   const body =
-    "Mitt namn är Melker Stafverfeldt och jag är en systemutvecklare";
+    "Mitt namn är Melker Stafverfeldt och jag är en systemutvecklare.";
 
   const [apiData, setApiData] = useState({ projects: [] });
   const [error, setError] = useState(null);
