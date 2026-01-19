@@ -1,0 +1,19 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  gap: 2rem;
+}
+
+.contact-section .button-1 {
+  max-width: 300px;
+}
+
+.contact-heading {
+  /* background-color: red; */
+  margin-bottom: 0px;
+}

@@ -1,7 +1,6 @@
 .projects-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
 }
 

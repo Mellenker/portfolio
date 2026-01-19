@@ -33,7 +33,7 @@
   /* white-space: nowrap; */
 }
 
-.hero-header {
+.hero-heading {
   font-size: 56px;
 }
 
@@ -71,7 +71,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .hero-header {
+  .hero-heading {
     margin-top: 0;
   }
 
