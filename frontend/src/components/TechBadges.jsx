@@ -12,6 +12,8 @@ function TechBadges({ tech_stack }) {
     Python: "python",
     Node: "nodejs",
     Java: "java",
+    SQLite: "sqlite",
+    Express: "express",
   };
 
   const renderBadges = (startIndex) => {
@@ -38,7 +40,7 @@ function TechBadges({ tech_stack }) {
   // Then render that chunk twice for seamless -50% marquee loop
   const baseRepeats = Math.max(4, Math.ceil(20 / (tech_stack?.length || 1)));
   const baseBadges = Array.from({ length: baseRepeats }, (_, r) =>
-    renderBadges(r * (tech_stack?.length || 0))
+    renderBadges(r * (tech_stack?.length || 0)),
   );
 
   return (

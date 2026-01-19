@@ -66,8 +66,9 @@
   padding-left: 0.25em;
 }
 
-.socialMediaLink:hover {
-  color: rgb(175, 150, 255);
+.header-container a:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {

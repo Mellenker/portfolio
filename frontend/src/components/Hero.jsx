@@ -5,7 +5,7 @@ function Hero({ title, body }) {
   return (
     <section id="hero" className="hero-section">
       <div className="hero-info">
-        <h2 className="hero-header">{title}</h2>
+        <h2 className="hero-heading">{title}</h2>
         <p className="hero-body">{body}</p>
       </div>
       <img src="https://picsum.photos/400" className="portrait-img" />

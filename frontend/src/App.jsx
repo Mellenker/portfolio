@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 function App() {
   const name = "Melker Stafverfeldt";
 
-  const title = "Välkommen.";
+  const title = "Välkommen";
   const body =
     "Mitt namn är Melker Stafverfeldt och jag är en systemutvecklare.";
 
