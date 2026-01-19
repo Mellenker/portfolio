@@ -19,6 +19,13 @@ function Header({ name }) {
         <a className="header-navbar-link" href="#contact">
           Kontakt
         </a>
+        <a
+          className="header-navbar-link"
+          href={"http://localhost:3000/downloads/CV.pdf"}
+          download
+        >
+          Ladda ned CV
+        </a>
         <div className="socialMedia-container">
           <a
             className="socialMediaLink"
