@@ -7,4 +7,5 @@
 
 .projects-section {
   /* background-color: blue; */
+  scroll-margin-top: var(--header-height);
 }
