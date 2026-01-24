@@ -11,4 +11,7 @@ Check out at mellenker.se
 
 **Backend**: Node, Express, SQLite
 
+## Future feature ideas
+* English language support
+* Client for modifying database
 
