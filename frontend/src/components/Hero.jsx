@@ -8,7 +8,10 @@ function Hero({ title, body }) {
         <h2 className="hero-heading">{title}</h2>
         <p className="hero-body">{body}</p>
       </div>
-      <img src="https://picsum.photos/400" className="portrait-img" />
+      <img
+        src="http://localhost:3000/images/portrait.jpg"
+        className="portrait-img"
+      />
       <a className="button-1" href="#projects">
         Gå till projekt
       </a>

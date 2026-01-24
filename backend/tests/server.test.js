@@ -13,5 +13,6 @@ describe("Server API", () => {
     for (const project of res.body.projects) {
       expect(Array.isArray(project.tech_stack)).toBe(true);
     }
+    console.log(res);
   });
 });
