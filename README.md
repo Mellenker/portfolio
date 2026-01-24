@@ -1,11 +1,17 @@
-**🚧 THIS IS A WORK IN PROGRESS! 🚧**
 
-# My portfolio
+# Portfolio Website 💼 
 
-Created using React.js
+Check out at mellenker.se
 
-## Will do:
+<img src="backend/public/images/portfolio.png" width="450">
 
-- Store info in a DB instead of hard-coded
-- Fix better styling
-- Make the website more mobile friendly
+## Tech Stack
+
+**Frontend**: React
+
+**Backend**: Node, Express, SQLite
+
+## Future feature ideas
+* English language support
+* Client for modifying database
+
