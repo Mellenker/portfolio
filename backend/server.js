@@ -1,4 +1,4 @@
-var compression = require("compression");
+// var compression = require("compression");
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -19,7 +19,7 @@ database.exec(`
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )
 `);
-app.use(compression());
+// app.use(compression());
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use("/downloads", express.static(path.join(__dirname, "public/downloads")));
 app.use("/images", express.static(path.join(__dirname, "public/images")));
