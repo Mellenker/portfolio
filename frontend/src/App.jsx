@@ -36,20 +36,20 @@ function App() {
 
   return (
     <div className="App">
-      {error ? (
-        <p>Error loading data: {error}</p>
-      ) : apiData.projects.length === 0 ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          <Header name={name} />
-          <main className="page">
-            <Hero title={title} body={body} />
+      <>
+        <Header name={name} />
+        <main className="page">
+          <Hero title={title} body={body} />
+          {error ? (
+            <p>Error loading data: {error}</p>
+          ) : apiData.projects.length === 0 ? (
+            <p>Loading projects...</p>
+          ) : (
             <ProjectList projects={apiData.projects} />
-            <Contact />
-          </main>
-        </>
-      )}
+          )}
+          <Contact />
+        </main>
+      </>
     </div>
   );
 }
