@@ -7,7 +7,8 @@ function TechBadges({ tech_stack }) {
     CSS: "css3",
     "C++": "cplusplus",
     Vite: "vitejs",
-    SFML: null, // Not available in devicon
+    SFML: null,
+    ZeroMQ: null,
     HTML: "html5",
     Python: "python",
     Node: "nodejs",

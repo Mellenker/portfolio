@@ -13,17 +13,16 @@ function App() {
   const body =
     "Mitt namn är Melker Stafverfeldt och jag är en systemutvecklare.";
 
-  const [apiData, setApiData] = useState({ projects: [] });
+  const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
 
   // Fetch data from backend
   useEffect(() => {
     const controller = new AbortController();
 
-    // Use await instead of promises?
-    fetch("/api", { signal: controller.signal })
+    fetch("/api/projects", { signal: controller.signal })
       .then((res) => res.json())
-      .then((data) => setApiData(data))
+      .then((data) => setProjects(data))
       .catch((error) => {
         if (error.name !== "AbortError") {
           console.error("Error fetching data:", error);
@@ -42,10 +41,10 @@ function App() {
           <Hero title={title} body={body} />
           {error ? (
             <p>Error loading data: {error}</p>
-          ) : apiData.projects.length === 0 ? (
-            <p>Loading projects...</p>
+          ) : projects && projects.length > 0 ? (
+            <ProjectList projects={projects} />
           ) : (
-            <ProjectList projects={apiData.projects} />
+            <p>Loading projects...</p>
           )}
           <Contact />
         </main>
