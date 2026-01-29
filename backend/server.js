@@ -81,10 +81,6 @@ app.get("/api/projects", async (req, res) => {
   }
 });
 
-app.listen(port, "0.0.0.0", () => {
-  console.log(`App is listening on ${port}`);
-});
-
 // Initialize database before starting server
 initDatabase()
   .then(() => {
