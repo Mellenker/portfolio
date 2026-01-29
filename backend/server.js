@@ -1,26 +1,58 @@
 const express = require("express");
-const sqlite3 = require("sqlite3");
+const initSqlJs = require("sql.js");
+const fs = require("fs");
 const path = require("path");
 
 const app = express();
 const port = 3000;
 
-const db = new sqlite3.Database("./database.db", (err) => {
-  if (err) {
-    console.error(err.message);
-  }
-  console.log("Connected to the database.");
-});
+let db;
 
-async function fetchAll(db, sql, params) {
-  return new Promise((resolve, reject) => {
-    db.all(sql, params, (err, rows) => {
-      if (err) reject(err);
-      resolve(rows);
-    });
-  });
+// Initialize the database at startup
+async function initDatabase() {
+  const SQL = await initSqlJs();
+  const dbPath = "./database.db";
+
+  if (fs.existsSync(dbPath)) {
+    // Load existing database from file
+    const buffer = fs.readFileSync(dbPath);
+    db = new SQL.Database(buffer);
+  } else {
+    // Create new database
+    db = new SQL.Database();
+    // CREATE INITIAL TABLE HERE
+  }
+
+  console.log("Connected to the database.");
+  return db;
 }
 
+// Save database to file
+function saveDb() {
+  if (db) {
+    const data = db.export();
+    const buffer = Buffer.from(data);
+    fs.writeFileSync("./database.db", buffer);
+  }
+}
+
+// Query helper function
+async function fetchAll(query, params = []) {
+  return new Promise((resolve, reject) => {
+    try {
+      const stmt = db.prepare(query);
+      stmt.bind(params);
+      const rows = [];
+      while (stmt.step()) {
+        rows.push(stmt.getAsObject());
+      }
+      stmt.free();
+      resolve(rows);
+    } catch (err) {
+      reject(err);
+    }
+  });
+}
 // Serve static files first
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use("/downloads", express.static(path.join(__dirname, "public/downloads")));
@@ -29,7 +61,6 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.get("/api/projects", async (req, res) => {
   try {
     const projects = await fetchAll(
-      db,
       `SELECT p.*, GROUP_CONCAT(t.name) as tech_stack
        FROM projects p
        LEFT JOIN projects_tech pt ON p.id = pt.project_id
@@ -38,7 +69,6 @@ app.get("/api/projects", async (req, res) => {
        ORDER BY p.created_at DESC`,
     );
 
-    // Convert tech_stack string to JSON array
     const formattedProjects = projects.map((project) => ({
       ...project,
       tech_stack: project.tech_stack ? project.tech_stack.split(",") : [],
@@ -54,6 +84,18 @@ app.get("/api/projects", async (req, res) => {
 app.listen(port, "0.0.0.0", () => {
   console.log(`App is listening on ${port}`);
 });
+
+// Initialize database before starting server
+initDatabase()
+  .then(() => {
+    app.listen(port, "0.0.0.0", () => {
+      console.log(`App is listening on ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error("Failed to initialize database:", err);
+    process.exit(1);
+  });
 
 // For testing
 module.exports = app;
