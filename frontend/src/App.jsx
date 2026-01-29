@@ -20,15 +20,18 @@ function App() {
   useEffect(() => {
     const controller = new AbortController();
 
-    fetch("/api/projects", { signal: controller.signal })
-      .then((res) => res.json())
-      .then((data) => setProjects(data))
-      .catch((error) => {
-        if (error.name !== "AbortError") {
-          console.error("Error fetching data:", error);
-          setError(error.message);
+    (async () => {
+      try {
+        const res = await fetch("/api/projects", { signal: controller.signal });
+        const data = await res.json();
+        setProjects(data);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error("Error fetching data:", err);
+          setError(err.message);
         }
-      });
+      }
+    })();
 
     return () => controller.abort();
   }, []);
