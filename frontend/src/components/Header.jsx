@@ -1,20 +1,14 @@
 // import { useState } from "react";
 // import { FaHambuger } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import HamburgerMenu from "./HamburgerMenu";
+
 import "./Header.css";
 
 function Header({ name }) {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen);
-  // };
-
   return (
     <header className="header-container">
       <h1 className="header-name">{name}</h1>
-
-      {/* <button classname="hamburger" onclick={toggleMenu}></button> */}
-
       <nav className="header-navbar">
         <a className="header-navbar-link" href="#contact">
           Kontakt
@@ -34,6 +28,7 @@ function Header({ name }) {
           </a>
         </div>
       </nav>
+      {/* <HamburgerMenu /> */}
     </header>
   );
 }
