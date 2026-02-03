@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api/projects": {
-        target: "http://localhost:3000",
+      "/.netlify/functions/get-projects": {
+        target: "http://localhost:8888",
         changeOrigin: true,
       },
       "/images": {
-        target: "http://localhost:3000",
+        target: "http://localhost:8888",
         changeOrigin: true,
       },
     },

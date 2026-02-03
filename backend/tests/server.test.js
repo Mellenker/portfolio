@@ -5,7 +5,9 @@ const app = require("../server");
 
 describe("Server API", () => {
   it("responds with projects array", async () => {
-    const res = await request(app).get("/api/projects");
+    const res = await request(app).get(
+      "http://localhost:8888/.netlify/functions/get-projects",
+    );
     console.log(res);
     expect(res.statusCode).toBe(200);
     expect(res.headers["content-type"]).toMatch(/json/);

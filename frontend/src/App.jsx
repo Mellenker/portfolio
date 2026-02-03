@@ -22,7 +22,9 @@ function App() {
 
     (async () => {
       try {
-        const res = await fetch("/api/projects", { signal: controller.signal });
+        const res = await fetch("/.netlify/functions/get-projects", {
+          signal: controller.signal,
+        });
         const data = await res.json();
         setProjects(data);
       } catch (err) {
