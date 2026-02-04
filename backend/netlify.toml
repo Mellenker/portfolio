@@ -1,14 +1,14 @@
-functionsDirectory = "/opt/build/repo/backend/netlify/functions"
+functionsDirectory = "/backend/netlify/functions"
 functionsDirectoryOrigin = "config"
 plugins = []
 headers = []
 redirects = []
 
 [build]
-publish = "/opt/build/repo/backend/public"
+publish = "/backend/public"
 publishOrigin = "config"
-base = "/opt/build/repo/backend"
-functions = "/opt/build/repo/backend/netlify/functions"
+base = "/backend"
+functions = "/backend/netlify/functions"
 
   [build.environment]
 
