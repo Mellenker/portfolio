@@ -1,0 +1,29 @@
+functionsDirectory = "/opt/build/repo/backend/netlify/functions"
+functionsDirectoryOrigin = "config"
+plugins = []
+headers = []
+redirects = []
+
+[build]
+publish = "/opt/build/repo/backend/public"
+publishOrigin = "config"
+base = "/opt/build/repo/backend"
+functions = "/opt/build/repo/backend/netlify/functions"
+
+  [build.environment]
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
+
+[functions]
+
+  [functions."*"]

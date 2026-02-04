@@ -1,3 +1,5 @@
+/* DOESN'T WORK YET WITH NETLIFY BACKEND */
+
 import { describe, it, expect } from "vitest";
 const request = require("supertest");
 
