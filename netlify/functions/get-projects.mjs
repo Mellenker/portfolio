@@ -16,7 +16,7 @@ export async function handler(event) {
     };
   }
 
-  const sql = neon(process.env.DATABASE_URL);
+  const sql = neon(process.env.NETLIFY_DATABASE_URL);
 
   try {
     const rows = await sql`
