@@ -7,7 +7,7 @@ redirects = []
 [build]
 publish = "/public"
 publishOrigin = "config"
-base = "/backend"
+base = "/"
 functions = "/netlify/functions"
 
   [build.environment]

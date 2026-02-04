@@ -7,11 +7,11 @@ export default defineConfig({
   server: {
     proxy: {
       "/.netlify/functions/get-projects": {
-        target: "http://localhost:8888",
+        target: "https://mellenkerbackend2.netlify.app",
         changeOrigin: true,
       },
       "/images": {
-        target: "http://localhost:8888",
+        target: "https://mellenkerbackend2.netlify.app",
         changeOrigin: true,
       },
     },
