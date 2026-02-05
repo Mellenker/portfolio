@@ -15,6 +15,8 @@ function TechBadges({ tech_stack }) {
     Java: "java",
     SQLite: "sqlite",
     Express: "express",
+    Netlify: "netlify",
+    PostgreSQL: "postgresql",
   };
 
   const renderBadges = (startIndex) => {
