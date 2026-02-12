@@ -4,6 +4,10 @@ plugins = []
 headers = []
 redirects = []
 
+[dev]
+  command = "npm run dev"
+  targetPort = 5173 
+
 [build]
 publish = "/dist"
 base = "/"

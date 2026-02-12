@@ -11,7 +11,8 @@ function App() {
 
   const title = "Välkommen";
   const body =
-    "Mitt namn är Melker Stafverfeldt och jag är en systemutvecklare.";
+    "Jag är en utbildad systemutvecklare med bred teknisk grund i områden som programmering, testning och maskininlärning. ";
+  const linkText = "Gå till projekt";
 
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
@@ -43,7 +44,7 @@ function App() {
       <>
         <Header name={name} />
         <main className="page">
-          <Hero title={title} body={body} />
+          <Hero title={title} body={body} linkText={linkText} />
           {error ? (
             <p>Error loading data: {error}</p>
           ) : projects && projects.length > 0 ? (

@@ -6,14 +6,14 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/.netlify/functions/get-projects": {
-        target: "https://mellenkerbackend2.netlify.app",
-        changeOrigin: true,
-      },
-      "/images": {
-        target: "https://mellenkerbackend2.netlify.app",
-        changeOrigin: true,
-      },
+      // "/.netlify/functions/get-projects": {
+      //   target: "http://localhost:8888/.netlify/functions/get-projects",
+      //   changeOrigin: true,
+      // },
+      // "/images": {
+      //   target: "http://localhost:8888/public/images",
+      //   changeOrigin: true,
+      // },
     },
   },
 });
