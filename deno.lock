@@ -12,6 +12,8 @@
     "packageJson": {
       "dependencies": [
         "npm:@eslint/js@^9.36.0",
+        "npm:@fortawesome/fontawesome-svg-core@^7.2.0",
+        "npm:@fortawesome/react-fontawesome@^3.2.0",
         "npm:@neondatabase/serverless@^1.0.2",
         "npm:@types/react-dom@^19.1.9",
         "npm:@types/react@^19.1.16",

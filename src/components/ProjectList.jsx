@@ -12,9 +12,10 @@ function ProjectList({ projects }) {
             image_url={project.image_url}
             title={project.title}
             description={project.description}
-            // link={project.link}
             github_url={project.github_url}
             download_url={project.download_url}
+            other_url={project.other_url}
+            other_url_text={project.other_url_text}
             tech_stack={project.tech_stack}
           />
         ))}

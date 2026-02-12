@@ -1,7 +1,8 @@
 import "./Hero.css";
 import "./Button.css";
+import GlowingLink from "./GlowingLink";
 
-function Hero({ title, body }) {
+function Hero({ title, body, linkText }) {
   return (
     <section id="hero" className="hero-section">
       <div className="hero-info">
@@ -9,9 +10,7 @@ function Hero({ title, body }) {
         <p className="hero-body">{body}</p>
       </div>
       <img src="/images/portrait.jpg" className="portrait-img" />
-      <a className="button-1" href="#projects">
-        Gå till projekt
-      </a>
+      <GlowingLink linkText={linkText} />
     </section>
   );
 }

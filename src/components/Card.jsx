@@ -1,5 +1,6 @@
 import "./Card.css";
 import "./Button.css";
+import GlowingLink from "./GlowingLink";
 import TechBadges from "./TechBadges";
 import { FaGithub, FaDownload } from "react-icons/fa";
 
@@ -9,6 +10,8 @@ function Card({
   description,
   github_url,
   download_url,
+  other_url,
+  other_url_text,
   tech_stack,
 }) {
   return (
@@ -20,26 +23,16 @@ function Card({
         <div className="card-info-bottom-container">
           <TechBadges tech_stack={tech_stack} />
           <div className="card-link-container">
-            {github_url && (
-              <a
-                href={github_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-1 button-1--github"
-              >
-                <FaGithub />
-                {/* View on GitHub */}
-              </a>
-            )}
+            {github_url && <GlowingLink url={github_url} icon={FaGithub} />}
             {download_url && (
-              <a
-                href={download_url}
-                download
-                className="button-1 button-1--download"
-              >
-                <FaDownload />
-                {/* Download ZIP */}
-              </a>
+              <GlowingLink url={download_url} icon={FaDownload} />
+            )}
+            {other_url && (
+              <GlowingLink
+                url={other_url}
+                linkText={other_url_text}
+                // icon={FaDownload}
+              />
             )}
           </div>
         </div>
