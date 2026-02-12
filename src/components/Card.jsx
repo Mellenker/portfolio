@@ -1,5 +1,4 @@
 import "./Card.css";
-import "./Button.css";
 import GlowingLink from "./GlowingLink";
 import TechBadges from "./TechBadges";
 import { FaGithub, FaDownload } from "react-icons/fa";
