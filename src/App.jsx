@@ -7,7 +7,8 @@ import ProjectList from "./components/ProjectList";
 import Contact from "./components/Contact";
 
 function App() {
-  const name = "Melker Stafverfeldt";
+  const firstName = "Melker";
+  const lastName = "Stafverfeldt";
 
   const title = "Välkommen";
   const body =
@@ -42,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <>
-        <Header name={name} />
+        <Header firstName={firstName} lastName={lastName} />
         <main className="page">
           <Hero title={title} body={body} linkText={linkText} />
           {error ? (

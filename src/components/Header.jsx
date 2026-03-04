@@ -5,10 +5,15 @@ import HamburgerMenu from "./HamburgerMenu";
 
 import "./Header.css";
 
-function Header({ name }) {
+function Header({ firstName, lastName }) {
   return (
     <header className="header-container">
-      <h1 className="header-name">{name}</h1>
+      <a className="header-name" href="#hero">
+        {firstName + " " + lastName}
+      </a>
+      <a className="header-name initials" href="#hero">
+        {firstName[0] + lastName[0]}
+      </a>
       <nav className="header-navbar">
         <a className="header-navbar-link" href="#contact">
           Kontakt
