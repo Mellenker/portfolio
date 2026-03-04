@@ -28,7 +28,7 @@ function Header({ name }) {
           </a>
         </div>
       </nav>
-      {/* <HamburgerMenu /> */}
+      <HamburgerMenu />
     </header>
   );
 }

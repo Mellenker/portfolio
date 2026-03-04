@@ -11,7 +11,7 @@ function App() {
 
   const title = "Välkommen";
   const body =
-    "Jag är en utbildad systemutvecklare med bred teknisk grund i områden som programmering, testning och maskininlärning. ";
+    "Jag är en utbildad systemutvecklare med bred teknisk grund i områden som programmering, databashantering, och maskininlärning. ";
   const linkText = "Gå till projekt";
 
   const [projects, setProjects] = useState([]);
