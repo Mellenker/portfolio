@@ -54,6 +54,11 @@
   padding-bottom: 0.25em;
 }
 
+.header-navbar-link:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 .socialMedia-container {
   /* border-style: solid; */
   border-color: red;
@@ -70,11 +75,6 @@
   font-size: 2em;
   padding-right: 0.25em;
   padding-left: 0.25em;
-}
-
-.header-container a:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
