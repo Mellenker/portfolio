@@ -70,14 +70,3 @@ h3 {
 p {
   font-size: 1rem;
 }
-
-@media (max-width: 1024px) {
-  :root {
-    --margins-main: 5rem;
-  }
-}
-@media (max-width: 760px) {
-  :root {
-    --margins-main: 1rem;
-  }
-}

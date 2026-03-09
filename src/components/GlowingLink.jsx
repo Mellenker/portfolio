@@ -10,7 +10,7 @@ function GlowingLink({ url, icon: Icon, linkText, newTab = true }) {
       className="button-1"
     >
       {/* Icon is renamed to ensure correct rendering */}
-      {Icon && <Icon />}
+      {Icon && <Icon className="icon" />}
       {linkText && <p>{linkText}</p>}
     </a>
   );

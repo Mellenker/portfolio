@@ -20,6 +20,10 @@
   align-self: start;
 }
 
+.hero-section .button-1 p {
+  font-size: 20px;
+}
+
 .hero-info {
   grid-row: 1/1;
   justify-self: start;
