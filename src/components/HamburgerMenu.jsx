@@ -1,10 +1,9 @@
-import { IoMenu } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import "./HamburgerMenu.css";
 import "./Header.css";
 
-function HamburgerMenu({ navLinks, socialLinks }) {
+function HamburgerMenu({ navLinks }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,14 +13,12 @@ function HamburgerMenu({ navLinks, socialLinks }) {
       </div>
       <div className={isOpen ? "ham-navbar active" : "ham-navbar"}>
         {navLinks.map((item) => (
-          <a className="ham-navbar-link" key={item.label} href={item.href}>
-            {item.label}
-          </a>
-        ))}
-        {socialLinks.map((item) => (
-          <a className="ham-navbar-link" key={item.label} href={item.href}>
-            {item.label}
-          </a>
+          <>
+            <a className="ham-navbar-link" key={item.label} href={item.href}>
+              {item.icon}
+              <span className="link-label">{item.label}</span>
+            </a>
+          </>
         ))}
       </div>
     </>

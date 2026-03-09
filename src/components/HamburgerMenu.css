@@ -1,18 +1,16 @@
 .ham-navbar {
   position: fixed;
-  background-color: black;
-  top: 0;
+  background-color: rgb(0, 0, 0);
+  top: var(--header-height);
   width: 60%;
   right: -60%;
   height: 100%;
   transition: 0.3s ease;
-
   display: flex;
   flex-direction: column;
-}
-
-.ham-navbar a {
-  gap: 1rem;
+  font-size: 1.8rem;
+  gap: 2rem;
+  padding: 1rem;
 }
 
 .ham-navbar.active {
@@ -20,7 +18,10 @@
 }
 
 .ham-navbar-link {
+  display: flex;
+  align-items: center;
   color: var(--color-text);
+  gap: 1rem;
 }
 
 .ham-menu {

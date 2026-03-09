@@ -1,16 +1,19 @@
 // import { useState } from "react";
 // import { FaHambuger } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 import HamburgerMenu from "./HamburgerMenu";
-
+import { GoDownload } from "react-icons/go";
 import "./Header.css";
 
 const navLinks = [
-  { label: "Kontakt", href: "#contact" },
-  { label: "Ladda ned CV", href: "/downloads/CV.pdf", download: true },
-];
-
-const socialLinks = [
+  { label: "Kontakt", icon: <IoMail />, href: "#contact" },
+  {
+    label: "Ladda ned CV",
+    icon: <GoDownload />,
+    href: "/downloads/CV.pdf",
+    download: true,
+  },
   {
     label: "LinkedIn",
     icon: <FaLinkedin />,
@@ -26,34 +29,43 @@ const socialLinks = [
 ];
 
 function Header({ firstName, lastName }) {
+  const socialLinks = navLinks.filter((entry) => entry.isSocial);
+  const otherLinks = navLinks.filter((entry) => !entry.isSocial);
+
   return (
     <header className="header-container">
-      <a className="header-name" href="#hero">
+      <a
+        className="header-name"
+        data-initials={firstName[0] + lastName[0]}
+        href="#hero"
+      >
         {firstName + " " + lastName}
       </a>
-      <a className="header-name initials" href="#hero">
-        {firstName[0] + lastName[0]}
-      </a>
       <nav className="header-navbar">
-        {navLinks.map((item) => (
+        {otherLinks.map((item) => (
           <a
             key={item.label}
-            className="header-navbar-link"
+            className={"header-navbar-link"}
             href={item.href}
             download={item.download}
           >
             {item.label}
           </a>
         ))}
-        <div className="socialMedia-container">
-          {socialLinks.map((item, i) => (
-            <a key={i} className="socialMediaLink" href={item.href}>
+        <nav className="socialMedia-container">
+          {socialLinks.map((item) => (
+            <a
+              key={item.label}
+              className={"socialMediaLink"}
+              href={item.href}
+              download={item.download}
+            >
               {item.icon}
             </a>
           ))}
-        </div>
+        </nav>
       </nav>
-      <HamburgerMenu navLinks={navLinks} socialLinks={socialLinks} />
+      <HamburgerMenu navLinks={navLinks} />
     </header>
   );
 }
