@@ -27,7 +27,8 @@
 
   /* Root font settings */
   font-size: clamp(14px, 1.48vw, 20px);
-  font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    Inter, sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
