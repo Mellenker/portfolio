@@ -1,4 +1,5 @@
 import "./TechBadges.css";
+import { useRef, useLayoutEffect, useState } from "react";
 
 function TechBadges({ tech_stack }) {
   const TECH_ICONS = {
@@ -18,6 +19,8 @@ function TechBadges({ tech_stack }) {
     Netlify: "netlify",
     PostgreSQL: "postgresql",
   };
+
+  function ComputerTrackLength() {}
 
   const renderBadges = (startIndex) => {
     return tech_stack?.map((tech, index) => {
@@ -46,10 +49,25 @@ function TechBadges({ tech_stack }) {
     renderBadges(r * (tech_stack?.length || 0)),
   );
 
+  const setRef = useRef(null);
+  const [width, setWidth] = useState(0);
+
+  useLayoutEffect(() => {
+    if (setRef.current) {
+      // width of the rendered baseBadges block
+      const w = setRef.current.getBoundingClientRect().width;
+      setWidth(w);
+      console.log("baseBadges width:", w);
+    }
+  }, [tech_stack]); // re‑run when stack changes
+
   return (
     <div className="tech-container">
-      <div className="tech-track">
-        <div className="tech-set" aria-hidden={false}>
+      <div
+        className="tech-track"
+        style={{ "--marquee-duration": `${width / 45}s` }}
+      >
+        <div ref={setRef} className="tech-set" aria-hidden={false}>
           {baseBadges}
         </div>
         <div className="tech-set" aria-hidden={true}>

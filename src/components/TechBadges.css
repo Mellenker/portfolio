@@ -13,7 +13,6 @@
 /* Marquee track animates as a single strip */
 .tech-track {
   --tech-badge-gap: 1rem;
-  --marquee-duration: 24s;
   display: flex;
   align-items: center;
   width: max-content;
