@@ -23,7 +23,7 @@
   --color-background: rgb(24, 24, 24);
 
   /* Header  settings */
-  --header-height: 7.5vh; /* To ensure hero takes up exactly 100vh */
+  --header-height: 7.5svh; /* To ensure hero takes up exactly 100svh */
 
   /* Root font settings */
   font-size: clamp(14px, 1.48vw, 20px);

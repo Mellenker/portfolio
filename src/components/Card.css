@@ -89,21 +89,6 @@
   padding-bottom: var(--unit);
 }
 
-.card-link-btn {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  height: fit-content;
-  align-items: center;
-  /* border-style: solid; */
-  border-radius: var(--btn-radius);
-  gap: var(--unit);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .card-container {

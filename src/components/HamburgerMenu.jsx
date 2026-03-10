@@ -1,7 +1,6 @@
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import "./HamburgerMenu.css";
-import "./Header.css";
 
 function HamburgerMenu({ navLinks }) {
   const [isOpen, setIsOpen] = useState(false);
