@@ -2,7 +2,7 @@ import "./Card.css";
 import GlowingLink from "./GlowingLink";
 import TechBadges from "./TechBadges";
 import { FaGithub, FaDownload } from "react-icons/fa";
-
+import { GoDownload } from "react-icons/go";
 function Card({
   title,
   image_url,
@@ -24,7 +24,7 @@ function Card({
           <div className="card-link-container">
             {github_url && <GlowingLink url={github_url} icon={FaGithub} />}
             {download_url && (
-              <GlowingLink url={download_url} icon={FaDownload} />
+              <GlowingLink url={download_url} icon={GoDownload} />
             )}
             {other_url && (
               <GlowingLink

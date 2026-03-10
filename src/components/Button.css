@@ -16,6 +16,15 @@
   align-items: center;
   justify-content: center;
   color: white;
+  gap: 0.5rem;
+}
+
+.button-1 > .icon {
+  font-size: 1.4rem;
+}
+
+.button-1 p {
+  margin: 0;
 }
 
 .button-1:before {

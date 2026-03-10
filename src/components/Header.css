@@ -1,7 +1,3 @@
-/* Use grid in header container? */
-
-/* Add Github button */
-
 .header-container {
   /* border-style: solid; */
   display: flex;
@@ -20,12 +16,11 @@
 }
 
 .header-name {
+  align-self: center;
   margin: 0;
   color: var(--color-text);
   /* border-style: solid; */
   font-size: 1.5rem;
-  justify-content: center;
-  align-items: center;
 }
 
 .header-navbar {
@@ -48,6 +43,11 @@
   padding-bottom: 0.25em;
 }
 
+.header-navbar-link:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 .socialMedia-container {
   /* border-style: solid; */
   border-color: red;
@@ -66,12 +66,19 @@
   padding-left: 0.25em;
 }
 
-.header-container a:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
 @media (max-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+  }
+  .header-name {
+    font-size: 0;
+  }
+  .header-name::before {
+    content: attr(data-initials);
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    padding-left: 0.4rem;
+  }
   .header-navbar {
     display: none;
   }

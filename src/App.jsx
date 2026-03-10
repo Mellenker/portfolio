@@ -7,11 +7,12 @@ import ProjectList from "./components/ProjectList";
 import Contact from "./components/Contact";
 
 function App() {
-  const name = "Melker Stafverfeldt";
+  const firstName = "Melker";
+  const lastName = "Stafverfeldt";
 
   const title = "Välkommen";
   const body =
-    "Jag är en utbildad systemutvecklare med bred teknisk grund i områden som programmering, testning och maskininlärning. ";
+    "Jag är en utbildad systemutvecklare med bred teknisk grund i områden som programmering, databashantering, och maskininlärning. ";
   const linkText = "Gå till projekt";
 
   const [projects, setProjects] = useState([]);
@@ -42,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <>
-        <Header name={name} />
+        <Header firstName={firstName} lastName={lastName} />
         <main className="page">
           <Hero title={title} body={body} linkText={linkText} />
           {error ? (

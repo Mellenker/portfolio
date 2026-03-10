@@ -23,11 +23,12 @@
   --color-background: rgb(24, 24, 24);
 
   /* Header  settings */
-  --header-height: 7.5vh; /* To ensure hero takes up exactly 100vh */
+  --header-height: 7.5svh; /* To ensure hero takes up exactly 100svh */
 
   /* Root font settings */
   font-size: clamp(14px, 1.48vw, 20px);
-  font-family: consolas, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    Inter, sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -69,15 +70,4 @@ h3 {
 
 p {
   font-size: 1rem;
-}
-
-@media (max-width: 1024px) {
-  :root {
-    --margins-main: 5rem;
-  }
-}
-@media (max-width: 760px) {
-  :root {
-    --margins-main: 1rem;
-  }
 }

@@ -1,21 +1,24 @@
-import { IoMenu } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
+import { useState } from "react";
 import "./HamburgerMenu.css";
 
-function HamburgerMenu() {
+function HamburgerMenu({ navLinks }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <nav className="ham-menu">
-        <IoMenu className="ham-icon" />
-        {/* <IoClose className="close-icon" /> */}
-      </nav>
-      <div className="off-screen-menu">
-        <ul>
-          <li>Kontakt</li>
-          <li>Ladda ned CV</li>
-          <li>LinkedIn</li>
-          <li>GitHub</li>
-        </ul>
+      <div className="ham-menu" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <IoClose /> : <IoMenu />}
+      </div>
+      <div className={isOpen ? "ham-navbar active" : "ham-navbar"}>
+        {navLinks.map((item) => (
+          <>
+            <a className="ham-navbar-link" key={item.label} href={item.href}>
+              {item.icon}
+              <span className="link-label">{item.label}</span>
+            </a>
+          </>
+        ))}
       </div>
     </>
   );

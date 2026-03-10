@@ -1,34 +1,71 @@
 // import { useState } from "react";
 // import { FaHambuger } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 import HamburgerMenu from "./HamburgerMenu";
-
+import { GoDownload } from "react-icons/go";
 import "./Header.css";
 
-function Header({ name }) {
+const navLinks = [
+  { label: "Kontakt", icon: <IoMail />, href: "#contact" },
+  {
+    label: "Ladda ned CV",
+    icon: <GoDownload />,
+    href: "/downloads/CV.pdf",
+    download: true,
+  },
+  {
+    label: "LinkedIn",
+    icon: <FaLinkedin />,
+    isSocial: true,
+    href: "https://www.linkedin.com/in/melker-stafverfeldt-458406363/",
+  },
+  {
+    label: "GitHub",
+    icon: <FaGithub />,
+    isSocial: true,
+    href: "https://github.com/Mellenker",
+  },
+];
+
+function Header({ firstName, lastName }) {
+  const socialLinks = navLinks.filter((entry) => entry.isSocial);
+  const otherLinks = navLinks.filter((entry) => !entry.isSocial);
+
   return (
     <header className="header-container">
-      <h1 className="header-name">{name}</h1>
+      <a
+        className="header-name"
+        data-initials={firstName[0] + lastName[0]}
+        href="#hero"
+      >
+        {firstName + " " + lastName}
+      </a>
       <nav className="header-navbar">
-        <a className="header-navbar-link" href="#contact">
-          Kontakt
-        </a>
-        <a className="header-navbar-link" href={"/downloads/CV.pdf"} download>
-          Ladda ned CV
-        </a>
-        <div className="socialMedia-container">
+        {otherLinks.map((item) => (
           <a
-            className="socialMediaLink"
-            href="https://www.linkedin.com/in/melker-stafverfeldt-458406363/"
+            key={item.label}
+            className={"header-navbar-link"}
+            href={item.href}
+            download={item.download}
           >
-            <FaLinkedin />
+            {item.label}
           </a>
-          <a className="socialMediaLink" href="https://github.com/Mellenker">
-            <FaGithub />
-          </a>
-        </div>
+        ))}
+        <nav className="socialMedia-container">
+          {socialLinks.map((item) => (
+            <a
+              key={item.label}
+              className={"socialMediaLink"}
+              href={item.href}
+              download={item.download}
+            >
+              {item.icon}
+            </a>
+          ))}
+        </nav>
       </nav>
-      {/* <HamburgerMenu /> */}
+      <HamburgerMenu navLinks={navLinks} />
     </header>
   );
 }
