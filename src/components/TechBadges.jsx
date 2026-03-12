@@ -20,8 +20,6 @@ function TechBadges({ tech_stack }) {
     PostgreSQL: "postgresql",
   };
 
-  function ComputerTrackLength() {}
-
   const renderBadges = (startIndex) => {
     return tech_stack?.map((tech, index) => {
       const iconName = TECH_ICONS[tech];
@@ -44,22 +42,27 @@ function TechBadges({ tech_stack }) {
 
   // Build a long enough content chunk to exceed viewport width
   // Then render that chunk twice for seamless -50% marquee loop
-  const baseRepeats = Math.max(4, Math.ceil(20 / (tech_stack?.length || 1)));
-  const baseBadges = Array.from({ length: baseRepeats }, (_, r) =>
+  const badgeRepeats = Math.max(4, Math.ceil(20 / (tech_stack?.length || 1)));
+  console.log("badgeRepeats:", badgeRepeats);
+  const badgesChunk = Array.from({ length: badgeRepeats }, (_, r) =>
     renderBadges(r * (tech_stack?.length || 0)),
   );
 
-  const setRef = useRef(null);
+  const chunkRef = useRef(null);
   const [width, setWidth] = useState(0);
 
   useLayoutEffect(() => {
-    if (setRef.current) {
-      // width of the rendered baseBadges block
-      const w = setRef.current.getBoundingClientRect().width;
+    if (!chunkRef.current) return;
+
+    // Makes sure images are loaded before width calculation
+    const observer = new ResizeObserver(() => {
+      const w = chunkRef.current.getBoundingClientRect().width;
       setWidth(w);
-      console.log("baseBadges width:", w);
-    }
-  }, [tech_stack]); // re‑run when stack changes
+    });
+
+    observer.observe(chunkRef.current);
+    return () => observer.disconnect();
+  }, [tech_stack]);
 
   return (
     <div className="tech-container">
@@ -67,11 +70,11 @@ function TechBadges({ tech_stack }) {
         className="tech-track"
         style={{ "--marquee-duration": `${width / 45}s` }}
       >
-        <div ref={setRef} className="tech-set" aria-hidden={false}>
-          {baseBadges}
+        <div ref={chunkRef} className="tech-set" aria-hidden={false}>
+          {badgesChunk}
         </div>
         <div className="tech-set" aria-hidden={true}>
-          {baseBadges}
+          {badgesChunk}
         </div>
       </div>
     </div>
