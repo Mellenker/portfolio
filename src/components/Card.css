@@ -53,7 +53,7 @@
 }
 
 .card-container:has(.card-info-description.expanded) {
-  height: 85vh;
+  height: fit-content;
 }
 
 .card-info-bottom-container {
