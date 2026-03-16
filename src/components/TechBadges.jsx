@@ -43,7 +43,6 @@ function TechBadges({ tech_stack }) {
   // Build a long enough content chunk to exceed viewport width
   // Then render that chunk twice for seamless -50% marquee loop
   const badgeRepeats = Math.max(4, Math.ceil(20 / (tech_stack?.length || 1)));
-  console.log("badgeRepeats:", badgeRepeats);
   const badgesChunk = Array.from({ length: badgeRepeats }, (_, r) =>
     renderBadges(r * (tech_stack?.length || 0)),
   );
@@ -54,7 +53,7 @@ function TechBadges({ tech_stack }) {
   useLayoutEffect(() => {
     if (!chunkRef.current) return;
 
-    // Makes sure images are loaded before width calculation
+    // Makes sure badge icons are loaded before width calculation
     const observer = new ResizeObserver(() => {
       const w = chunkRef.current.getBoundingClientRect().width;
       setWidth(w);

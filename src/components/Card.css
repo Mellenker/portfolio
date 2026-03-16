@@ -24,6 +24,7 @@
 .card-info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.5rem;
   padding: 1rem 1rem 0.75rem;
   min-height: 0;
@@ -39,11 +40,20 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  padding: 0 1rem 0 1rem;
+  /* padding: 0 1rem 0 1rem; */
   text-align: justify;
   overflow-y: auto;
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+.card-info-description.expanded {
+  align-items: flex-start;
+  max-height: none;
+}
+
+.card-container:has(.card-info-description.expanded) {
+  height: 85vh;
 }
 
 .card-info-bottom-container {
