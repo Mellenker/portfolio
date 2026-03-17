@@ -1,26 +1,15 @@
 :root {
   /*  ##### Global variables #####*/
-
-  /* Spacing */
-  --unit: 8px;
-  --spacing-1: clamp(24px, 4vw, 64px);
-  /* --spacing-1: 8px; */
-  --spacing-2: clamp(8px, 4vw, 32px);
-  --spacing-2: 32px;
-  --spacing-3: 64px;
-  --spacing-4: clamp(64px, 4vw, 128px);
-  /* --main-margins: clamp(4px, 100%, px); */
-  /* --margins-main: clamp(1rem, 20vw, 256px); */
-  /* --margins-main: clamp(1rem, -5.818rem + 27.273vi, 16rem); */
   --margins-main: 8rem;
-  /* --spacing-4: 128px; */
   --btn-radius: 32px;
 
   /* Colors */
   --color-text: rgba(255, 255, 255, 0.87);
-  --color-secondary: #121212;
+  /* --color-secondary: #121212; */
+  --color-secondary: #000000;
   --color-primary: rgb(17, 59, 30);
   --color-background: rgb(24, 24, 24);
+  --color-border: rgb(0, 255, 81);
 
   /* Header  settings */
   --header-height: 7.5svh; /* To ensure hero takes up exactly 100svh */
@@ -34,7 +23,7 @@
 
   color-scheme: light dark;
   color: var(--color-text);
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -53,6 +42,12 @@ a {
 body {
   margin: 0;
   min-width: 320px;
+  background-image: url("images/darkness.png");
+  background-color: #a5140a;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
 }
 
 /* Font sizes */

@@ -1,5 +1,5 @@
 import "./Hero.css";
-import GlowingLink from "./GlowingLink";
+import Link from "./Link";
 
 function Hero({ title, body, linkText }) {
   return (
@@ -9,7 +9,7 @@ function Hero({ title, body, linkText }) {
         <p className="hero-body">{body}</p>
       </div>
       <img src="/images/portrait.jpg" className="portrait-img" />
-      <GlowingLink url="#projects" linkText={linkText} newTab={false} />
+      <Link url="#projects" linkText={linkText} newTab={false} />
     </section>
   );
 }

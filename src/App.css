@@ -12,5 +12,5 @@
   flex-direction: column;
   max-width: 1660px;
   text-align: center;
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
 }
