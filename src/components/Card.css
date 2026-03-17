@@ -37,19 +37,22 @@
 }
 
 .card-info-description {
-  display: flex;
+  display: -webkit-box;
   align-items: center;
   margin-bottom: 1rem;
   /* padding: 0 1rem 0 1rem; */
   text-align: justify;
-  overflow-y: auto;
+  overflow-y: hidden;
   flex-grow: 1;
   flex-shrink: 1;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .card-info-description.expanded {
   align-items: flex-start;
   max-height: none;
+  -webkit-line-clamp: unset;
 }
 
 .card-container:has(.card-info-description.expanded) {
@@ -86,5 +89,26 @@
   .card-info-description {
     max-height: 8rem;
     align-items: flex-start;
+    position: relative;
+    transition: opacity 0.2s ease;
+  }
+
+  .card-info-description::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    background: linear-gradient(to bottom, transparent, var(--color-secondary));
+    pointer-events: none;
+  }
+
+  .card-info-description:active {
+    opacity: 0.8;
+  }
+
+  .card-info-description.expanded::after {
+    display: none;
   }
 }
