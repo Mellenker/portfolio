@@ -42,7 +42,7 @@ a {
 body {
   margin: 0;
   min-width: 320px;
-  background-image: url("images/darkness.png");
+  background-image: url("/images/darkness.png");
   background-color: #a5140a;
   background-attachment: fixed;
   background-size: contain;
