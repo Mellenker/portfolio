@@ -1,7 +1,7 @@
 import "./Button.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function GlowingLink({ url, icon: Icon, linkText, newTab = true }) {
+function Link({ url, icon: Icon, linkText, newTab = true }) {
   return (
     <a
       href={url}
@@ -16,4 +16,4 @@ function GlowingLink({ url, icon: Icon, linkText, newTab = true }) {
   );
 }
 
-export default GlowingLink;
+export default Link;
