@@ -1,20 +1,21 @@
 .button-1 {
   font-size: 1.5rem;
+  color: white;
   padding: 0.5em 0.7em;
   border: none;
   outline: none;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 50%;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
   gap: 0.5rem;
+  background-color: black;
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 1px;
+  border-radius: 45px;
 }
 
 .button-1 > .icon {
@@ -25,62 +26,8 @@
   margin: 0;
 }
 
-/* Glow layer — always present, hidden until hover */
-.button-1::before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  border-radius: 50px;
-  animation: glowing-button-1 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Show glow on hover */
-.button-1:hover::before {
-  opacity: 1;
-}
-
-@keyframes glowing-button-1 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-/* Black background layer */
-.button-1::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  left: 0;
-  top: 0;
-  border-radius: 45px;
+.button-1:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  background-color: var(--color-border);
 }

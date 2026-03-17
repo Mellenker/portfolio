@@ -5,9 +5,11 @@
 
   /* Colors */
   --color-text: rgba(255, 255, 255, 0.87);
-  --color-secondary: #121212;
+  /* --color-secondary: #121212; */
+  --color-secondary: #000000;
   --color-primary: rgb(17, 59, 30);
   --color-background: rgb(24, 24, 24);
+  --color-border: rgb(0, 255, 81);
 
   /* Header  settings */
   --header-height: 7.5svh; /* To ensure hero takes up exactly 100svh */
@@ -21,7 +23,7 @@
 
   color-scheme: light dark;
   color: var(--color-text);
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -40,6 +42,12 @@ a {
 body {
   margin: 0;
   min-width: 320px;
+  background-image: url("images/darkness.png");
+  background-color: #a5140a;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
 }
 
 /* Font sizes */

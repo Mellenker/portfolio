@@ -13,6 +13,9 @@
   left: 0;
   z-index: 999;
   background-color: black;
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 0 0 1px 0;
 }
 
 .header-name {
@@ -20,7 +23,7 @@
   margin: 0;
   color: var(--color-text);
   /* border-style: solid; */
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .header-navbar {
@@ -30,7 +33,7 @@
   gap: 2rem;
   justify-content: flex-end;
   align-items: center;
-  font-size: calc(2 * var(--unit));
+  font-size: 1rem;
 }
 
 .header-navbar-link {
@@ -50,7 +53,7 @@
 
 .socialMedia-container {
   /* border-style: solid; */
-  border-color: red;
+  border-color: var(--color-border);
   display: flex;
 }
 
